@@ -1,0 +1,1216 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff8f4;
+    color: #5a3040;
+    min-height: 100vh;
+}
+
+.page {
+    min-height: 100vh;
+    display: flex;
+}
+
+
+/* =========================
+   IMAGE SECTION
+========================= */
+
+.image-section {
+    width: 50%;
+    min-height: 100vh;
+
+    background: linear-gradient(
+        145deg,
+        #ffd9e6,
+        #fff0b8
+    );
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.image-frame {
+    width: 70%;
+    max-width: 430px;
+    height: 480px;
+
+    padding: 10px;
+
+    background: #ffffff;
+    border-radius: 220px 220px 25px 25px;
+
+    box-shadow:
+        0 15px 40px rgba(214, 92, 130, 0.18);
+
+    position: relative;
+    z-index: 2;
+}
+
+.image-frame img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    border-radius: 210px 210px 18px 18px;
+}
+
+.image-text {
+    margin-top: 22px;
+
+    font-size: 15px;
+    letter-spacing: 1px;
+
+    color: #7b4053;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Floating hearts */
+
+.heart {
+    position: absolute;
+
+    color: #f18aa8;
+
+    font-size: 35px;
+
+    animation: floatHeart 4s ease-in-out infinite;
+}
+
+.heart-one {
+    top: 15%;
+    left: 15%;
+}
+
+.heart-two {
+    top: 70%;
+    right: 13%;
+
+    font-size: 28px;
+
+    animation-delay: 1s;
+}
+
+.heart-three {
+    top: 25%;
+    right: 12%;
+
+    font-size: 22px;
+
+    animation-delay: 2s;
+}
+
+@keyframes floatHeart {
+
+    0% {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translateY(-18px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+}
+
+
+/* =========================
+   LOGIN SECTION
+========================= */
+
+.login-section {
+    width: 50%;
+    min-height: 100vh;
+
+    background: #fffaf7;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+}
+
+.content {
+    width: 100%;
+    max-width: 430px;
+
+    text-align: center;
+}
+
+.small-title {
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    color: #d88a9f;
+
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-family: Georgia, serif;
+
+    font-size: 48px;
+
+    color: #7d304c;
+
+    margin-bottom: 12px;
+}
+
+.yellow-line {
+    width: 55px;
+    height: 5px;
+
+    background: #f5cf62;
+
+    border-radius: 10px;
+
+    margin: 0 auto 28px;
+}
+
+.message {
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #87616d;
+
+    margin-bottom: 35px;
+}
+
+label {
+    display: block;
+
+    text-align: left;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #704253;
+
+    margin-bottom: 9px;
+}
+
+.password-box {
+    display: flex;
+
+    width: 100%;
+
+    background: #ffffff;
+
+    border: 2px solid #f2c4d2;
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(220, 111, 145, 0.08);
+
+    transition: 0.3s;
+}
+
+.password-box:focus-within {
+    border-color: #e88ca8;
+
+    box-shadow:
+        0 8px 30px rgba(220, 111, 145, 0.16);
+}
+
+.password-box input {
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+    padding: 16px;
+
+    font-size: 16px;
+
+    color: #633344;
+
+    background: transparent;
+}
+
+.password-box input::placeholder {
+    color: #c9a5af;
+}
+
+.password-box button {
+    width: 58px;
+
+    border: none;
+
+    background: #f5cf62;
+
+    color: #7d304c;
+
+    font-size: 23px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.password-box button:hover {
+    background: #efc54b;
+
+    transform: scale(1.05);
+}
+
+.hint {
+    margin-top: 18px;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    color: #a47b87;
+}
+
+#errorMessage {
+    margin-top: 15px;
+
+    font-size: 14px;
+
+    color: #d65c7c;
+
+    min-height: 20px;
+}
+
+
+/* =========================
+   MOBILE VIEW
+========================= */
+
+@media (max-width: 768px) {
+
+    .page {
+        flex-direction: column;
+    }
+
+    .image-section {
+        width: 100%;
+        min-height: 52vh;
+
+        padding: 30px 20px 20px;
+    }
+
+    .image-frame {
+        width: 68%;
+        max-width: 280px;
+
+        height: 330px;
+    }
+
+    .image-text {
+        font-size: 13px;
+
+        margin-top: 15px;
+    }
+
+    .heart-one {
+        left: 8%;
+    }
+
+    .heart-two {
+        right: 8%;
+    }
+
+    .heart-three {
+        right: 7%;
+    }
+
+    .login-section {
+        width: 100%;
+        min-height: 48vh;
+
+        padding: 35px 25px;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .message {
+        font-size: 15px;
+
+        margin-bottom: 25px;
+    }
+
+    .small-title {
+        font-size: 11px;
+    }
+
+    .hint {
+        font-size: 11px;
+    }
+}
+
+/* love2 */
+
+
+/* =================================
+   LOVE QUESTION PAGE
+================================= */
+
+.love-page {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 20% 20%, #fff2a8 0%, transparent 25%),
+        radial-gradient(circle at 80% 80%, #ffd4e2 0%, transparent 30%),
+        linear-gradient(135deg, #fff8d9, #ffe4ed);
+
+    padding: 25px;
+}
+
+
+/* Question Card */
+
+.question-card {
+    width: 100%;
+    max-width: 500px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.78);
+
+    border: 2px solid rgba(242, 160, 183, 0.35);
+
+    border-radius: 30px;
+
+    padding: 50px 30px;
+
+    box-shadow:
+        0 20px 60px rgba(215, 93, 130, 0.15);
+
+    position: relative;
+    z-index: 5;
+
+    backdrop-filter: blur(8px);
+}
+
+
+/* Big Heart */
+
+.big-heart {
+    width: 90px;
+    height: 90px;
+
+    margin: 0 auto 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #ffd0dc;
+
+    color: #d94f79;
+
+    font-size: 48px;
+
+    box-shadow:
+        0 0 0 10px rgba(255, 208, 220, 0.35),
+        0 0 35px rgba(225, 91, 128, 0.25);
+
+    animation: heartBeat 1.8s ease-in-out infinite;
+}
+
+@keyframes heartBeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+
+/* Text */
+
+.little-text {
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: #c98296;
+
+    margin-bottom: 12px;
+}
+
+.question-card h1 {
+    font-family: Georgia, serif;
+
+    font-size: 45px;
+
+    color: #7d304c;
+
+    margin-bottom: 15px;
+}
+
+.cute-message {
+    font-size: 15px;
+
+    color: #98717c;
+
+    margin-bottom: 38px;
+}
+
+
+/* Buttons */
+
+.answer-area {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 25px;
+
+    position: relative;
+
+    min-height: 65px;
+}
+
+.answer-button {
+    width: 145px;
+    height: 55px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+
+/* NO - LEFT */
+
+.no-button {
+    background: #ffd7e2;
+
+    color: #a44d68;
+
+    position: relative;
+
+    z-index: 10;
+}
+
+.no-button:hover {
+    box-shadow:
+        0 8px 20px rgba(211, 86, 123, 0.18);
+}
+
+
+/* YES - RIGHT */
+
+.yes-button {
+    background: #f5cf62;
+
+    color: #714226;
+
+    box-shadow:
+        0 8px 20px rgba(222, 177, 49, 0.18);
+
+    position: relative;
+
+    z-index: 10;
+}
+
+.yes-button:hover {
+    transform: translateY(-3px) scale(1.03);
+
+    box-shadow:
+        0 12px 25px rgba(222, 177, 49, 0.25);
+}
+
+
+/* Floating Hearts */
+
+.floating-heart {
+    position: absolute;
+
+    color: #ef8eaa;
+
+    font-size: 30px;
+
+    opacity: 0.55;
+
+    z-index: 1;
+
+    animation: floatingHeart 5s ease-in-out infinite;
+}
+
+.heart-1 {
+    left: 10%;
+    top: 15%;
+}
+
+.heart-2 {
+    left: 22%;
+    bottom: 18%;
+
+    animation-delay: 1s;
+}
+
+.heart-3 {
+    right: 12%;
+    top: 20%;
+
+    animation-delay: 2s;
+}
+
+.heart-4 {
+    right: 23%;
+    bottom: 15%;
+
+    animation-delay: 3s;
+}
+
+.heart-5 {
+    left: 45%;
+    top: 8%;
+
+    animation-delay: 1.5s;
+}
+
+.heart-6 {
+    right: 45%;
+    bottom: 8%;
+
+    animation-delay: 2.5s;
+}
+
+@keyframes floatingHeart {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.35;
+    }
+
+    50% {
+        transform: translateY(-25px) rotate(8deg);
+        opacity: 0.75;
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.35;
+    }
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+    .love-page {
+        min-height: 100dvh;
+
+        padding: 18px;
+    }
+
+    .question-card {
+        padding: 40px 20px;
+
+        border-radius: 25px;
+    }
+
+    .big-heart {
+        width: 75px;
+        height: 75px;
+
+        font-size: 40px;
+
+        margin-bottom: 20px;
+    }
+
+    .question-card h1 {
+        font-size: 35px;
+    }
+
+    .cute-message {
+        font-size: 14px;
+
+        margin-bottom: 32px;
+    }
+
+    .answer-area {
+        gap: 15px;
+
+        justify-content: space-between;
+    }
+
+    .answer-button {
+        width: 125px;
+        height: 52px;
+
+        font-size: 15px;
+    }
+
+}
+
+/* =================================
+OUR 1 YEAR MEMORIES PAGE
+================================= */
+
+.memories-page {
+min-height: 100vh;
+margin: 0;
+padding: 0;
+background: linear-gradient(135deg, #fff8fb, #fff4cf);
+color: #6f3048;
+overflow-x: hidden;
+}
+
+.memories-container {
+width: 92%;
+max-width: 1100px;
+margin: auto;
+padding: 50px 0 70px;
+}
+
+.memory-header {
+text-align: center;
+margin-bottom: 40px;
+}
+
+.memory-heart {
+width: 65px;
+height: 65px;
+margin: 0 auto 15px;
+border-radius: 50%;
+background: #fff;
+box-shadow: 0 0 25px rgba(255, 105, 150, 0.3);
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 38px;
+color: #e85d88;
+animation: heartBeat 1.8s infinite;
+}
+
+.memory-small-text {
+margin: 0 0 8px;
+font-size: 15px;
+color: #b46a7f;
+}
+
+.memory-header h1 {
+margin: 0;
+font-family: Georgia, serif;
+font-size: 42px;
+color: #8c3d59;
+}
+
+.memory-subtitle {
+margin-top: 12px;
+font-size: 17px;
+color: #9c6375;
+}
+
+/* MEMORY GRID */
+
+.memory-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+}
+
+/* MEMORY CARD */
+
+.memory-card {
+background: rgba(255, 255, 255, 0.9);
+border-radius: 22px;
+overflow: hidden;
+box-shadow: 0 12px 35px rgba(120, 60, 80, 0.12);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.memory-card:hover {
+transform: translateY(-8px) rotate(-1deg);
+box-shadow: 0 18px 40px rgba(120, 60, 80, 0.2);
+}
+
+.memory-card img {
+width: 100%;
+height: 300px;
+object-fit: contain;
+object-position: center;
+display: block;
+background: #fff8fb;
+padding: 8px;
+box-sizing: border-box;
+}
+
+.memory-content {
+padding: 18px;
+}
+
+.memory-content span {
+font-size: 12px;
+text-transform: uppercase;
+letter-spacing: 1px;
+color: #d47a98;
+}
+
+.memory-content h2 {
+margin: 7px 0;
+font-family: Georgia, serif;
+font-size: 22px;
+color: #7d304c;
+}
+
+.memory-content p {
+margin: 0;
+line-height: 1.6;
+font-size: 14px;
+color: #896574;
+}
+
+/* BOTTOM */
+
+.memory-bottom {
+text-align: center;
+margin-top: 55px;
+}
+
+.memory-bottom p {
+font-family: Georgia, serif;
+font-size: 22px;
+color: #8c3d59;
+}
+
+.memory-bottom button {
+margin-top: 10px;
+padding: 13px 30px;
+border: none;
+border-radius: 30px;
+background: linear-gradient(135deg, #e96a95, #f3b45b);
+color: white;
+font-size: 15px;
+cursor: pointer;
+box-shadow: 0 8px 20px rgba(220, 100, 130, 0.25);
+transition: 0.3s ease;
+}
+
+.memory-bottom button:hover {
+transform: translateY(-3px);
+box-shadow: 0 12px 25px rgba(220, 100, 130, 0.35);
+}
+
+/* FLOATING HEARTS */
+
+.memory-hearts span {
+position: fixed;
+bottom: -30px;
+color: rgba(232, 93, 136, 0.25);
+font-size: 25px;
+animation: floatMemoryHeart 8s linear infinite;
+pointer-events: none;
+}
+
+.memory-hearts span:nth-child(1) {
+left: 8%;
+animation-delay: 0s;
+}
+
+.memory-hearts span:nth-child(2) {
+left: 25%;
+animation-delay: 2s;
+}
+
+.memory-hearts span:nth-child(3) {
+left: 45%;
+animation-delay: 4s;
+}
+
+.memory-hearts span:nth-child(4) {
+left: 62%;
+animation-delay: 1s;
+}
+
+.memory-hearts span:nth-child(5) {
+left: 80%;
+animation-delay: 3s;
+}
+
+.memory-hearts span:nth-child(6) {
+left: 92%;
+animation-delay: 5s;
+}
+
+@keyframes floatMemoryHeart {
+
+0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+}
+
+20% {
+    opacity: 1;
+}
+
+100% {
+    transform: translateY(-110vh) rotate(30deg);
+    opacity: 0;
+}
+
+}
+
+@keyframes heartBeat {
+
+0%, 100% {
+    transform: scale(1);
+}
+
+50% {
+    transform: scale(1.12);
+}
+
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+.memories-container {
+    width: 90%;
+    padding-top: 35px;
+}
+
+.memory-header h1 {
+    font-size: 32px;
+}
+
+.memory-subtitle {
+    font-size: 15px;
+}
+
+.memory-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+}
+
+.memory-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: contain;
+    object-position: center;
+    padding: 8px;
+}
+
+.memory-content h2 {
+    font-size: 21px;
+}
+
+.memory-bottom {
+    margin-top: 40px;
+}
+
+.memory-bottom p {
+    font-size: 19px;
+}
+
+}
+
+
+/* surprice */
+
+/* =================================
+CHENNAI VISIT PAGE
+================================= */
+
+.visit-page {
+min-height: 100vh;
+margin: 0;
+background: linear-gradient(135deg, #fff7fb, #fff2c9);
+color: #71334b;
+overflow-x: hidden;
+}
+
+.visit-container {
+width: 92%;
+max-width: 700px;
+margin: auto;
+padding: 45px 0 70px;
+}
+
+.visit-card {
+background: rgba(255, 255, 255, 0.94);
+border-radius: 30px;
+padding: 40px;
+box-shadow: 0 15px 50px rgba(130, 60, 85, 0.15);
+position: relative;
+z-index: 2;
+}
+
+.visit-heart {
+width: 65px;
+height: 65px;
+margin: 0 auto 15px;
+border-radius: 50%;
+background: #fff8fb;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 38px;
+color: #e65f89;
+box-shadow: 0 0 25px rgba(230, 95, 137, 0.25);
+animation: heartBeat 1.8s infinite;
+}
+
+.visit-small-text {
+text-align: center;
+margin: 0 0 8px;
+font-size: 14px;
+color: #b46a7f;
+}
+
+.visit-card h1 {
+text-align: center;
+font-family: Georgia, serif;
+font-size: 36px;
+color: #8c3d59;
+margin: 0;
+}
+
+.visit-subtitle {
+text-align: center;
+color: #9b6878;
+margin: 12px 0 35px;
+font-size: 15px;
+}
+
+/* FORM */
+
+.visit-field {
+margin-bottom: 22px;
+}
+
+.visit-field label,
+.nickname-section > label {
+display: block;
+margin-bottom: 9px;
+font-size: 15px;
+font-weight: 600;
+color: #783b53;
+}
+
+.visit-field input {
+width: 100%;
+padding: 13px 15px;
+border: 1px solid #efbfd0;
+border-radius: 13px;
+background: #fffafb;
+color: #71334b;
+font-size: 15px;
+outline: none;
+box-sizing: border-box;
+}
+
+.visit-field input:focus,
+.custom-nickname:focus {
+border-color: #e56b94;
+box-shadow: 0 0 12px rgba(229, 107, 148, 0.15);
+}
+
+/* NICKNAME */
+
+.nickname-section {
+margin-top: 28px;
+}
+
+.nickname-options {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 10px;
+}
+
+.nickname-btn {
+padding: 12px 8px;
+border: 1px solid #efbfd0;
+border-radius: 14px;
+background: #fffafb;
+color: #81435b;
+cursor: pointer;
+font-size: 14px;
+transition: 0.25s ease;
+}
+
+.nickname-btn:hover {
+transform: translateY(-2px);
+border-color: #e56b94;
+}
+
+.nickname-btn.selected {
+background: #ffe1eb;
+border-color: #e56b94;
+color: #9a355b;
+box-shadow: 0 5px 15px rgba(229, 107, 148, 0.15);
+}
+
+.other-btn {
+background: #fff4d7;
+}
+
+.custom-nickname {
+width: 100%;
+margin-top: 12px;
+padding: 13px 15px;
+border: 1px solid #efbfd0;
+border-radius: 13px;
+background: #fffafb;
+box-sizing: border-box;
+outline: none;
+font-size: 15px;
+}
+
+/* MESSAGE */
+
+.visit-message {
+text-align: center;
+margin: 20px 0 0;
+min-height: 20px;
+color: #b04b6f;
+font-size: 14px;
+}
+
+/* SUBMIT */
+
+.visit-submit {
+display: block;
+width: 100%;
+margin-top: 25px;
+padding: 14px;
+border: none;
+border-radius: 30px;
+background: linear-gradient(135deg, #e96a95, #f3b45b);
+color: white;
+font-size: 16px;
+cursor: pointer;
+box-shadow: 0 8px 22px rgba(220, 100, 130, 0.25);
+transition: 0.3s ease;
+}
+
+.visit-submit:hover {
+transform: translateY(-3px);
+}
+
+/* FLOATING HEARTS */
+
+.visit-hearts span {
+position: fixed;
+bottom: -30px;
+color: rgba(232, 93, 136, 0.22);
+font-size: 25px;
+pointer-events: none;
+animation: floatMemoryHeart 8s linear infinite;
+}
+
+.visit-hearts span:nth-child(1) {
+left: 8%;
+}
+
+.visit-hearts span:nth-child(2) {
+left: 25%;
+animation-delay: 2s;
+}
+
+.visit-hearts span:nth-child(3) {
+left: 42%;
+animation-delay: 4s;
+}
+
+.visit-hearts span:nth-child(4) {
+left: 60%;
+animation-delay: 1s;
+}
+
+.visit-hearts span:nth-child(5) {
+left: 78%;
+animation-delay: 3s;
+}
+
+.visit-hearts span:nth-child(6) {
+left: 92%;
+animation-delay: 5s;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+.visit-container {
+    width: 92%;
+    padding-top: 25px;
+}
+
+.visit-card {
+    padding: 28px 20px;
+    border-radius: 25px;
+}
+
+.visit-card h1 {
+    font-size: 29px;
+}
+
+.nickname-options {
+    grid-template-columns: 1fr 1fr;
+}
+
+.nickname-btn {
+    font-size: 13px;
+    padding: 11px 5px;
+}
+
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html> <html lang="en"> <head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>You're Coming ♡</title>
+
+<link rel="stylesheet" href="mine.css">
+</head> <body class="visit-page">
+<div class="visit-hearts">
+
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+    <span>♡</span>
+
+</div>
+
+
+<main class="visit-container">
+
+    <div class="visit-card">
+
+        <div class="visit-heart">
+            ♡
+        </div>
+
+
+        <p class="visit-small-text">
+            One more little thing...
+        </p>
+
+
+        <h1>
+            So... You're Coming to Chennai ♡
+        </h1>
+
+
+        <p class="visit-subtitle">
+            Tell me a few things about your visit...
+        </p>
+
+
+        <form id="visitForm">
+
+
+            <!-- DATE -->
+
+            <div class="visit-field">
+
+                <label for="visitDate">
+                    When are you coming to Chennai?
+                </label>
+
+                <input
+                    type="date"
+                    id="visitDate"
+                    required
+                >
+
+            </div>
+
+
+            <!-- TIME -->
+
+            <div class="visit-field">
+
+                <label for="visitTime">
+                    What time will you reach Chennai?
+                </label>
+
+                <input
+                    type="time"
+                    id="visitTime"
+                    required
+                >
+
+            </div>
+
+
+            <!-- FROM -->
+
+            <div class="visit-field">
+
+                <label for="travellingFrom">
+                    Where are you travelling from?
+                </label>
+
+                <input
+                    type="text"
+                    id="travellingFrom"
+                    placeholder="Saudi Arabia"
+                    required
+                >
+
+            </div>
+
+
+            <!-- DESTINATION -->
+
+            <div class="visit-field">
+
+                <label for="chennaiPlace">
+                    After reaching Chennai, where are you going?
+                </label>
+
+                <input
+                    type="text"
+                    id="chennaiPlace"
+                    placeholder="Tell me where you're going..."
+                    required
+                >
+
+            </div>
+
+
+            <!-- NICKNAME -->
+
+            <div class="nickname-section">
+
+                <label>
+                    What would you like me to call you? ♡
+                </label>
+
+
+                <div class="nickname-options">
+
+
+                    <button
+                        type="button"
+                        class="nickname-btn"
+                        data-name="Dai Valanthavane">
+                        Dai Valanthavane
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="nickname-btn"
+                        data-name="Azhagu">
+                        Azhagu
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="nickname-btn"
+                        data-name="Thangam">
+                        Thangam
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="nickname-btn"
+                        data-name="Pattukutty">
+                        Pattukutty
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="nickname-btn"
+                        data-name="Aravintheeee">
+                        Aravintheeee
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="nickname-btn"
+                        data-name="Ennavane">
+                        Ennavane
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="nickname-btn"
+                        data-name="Mr. Mine">
+                        Mr. Mine
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="nickname-btn other-btn"
+                        data-name="other">
+                        Something else...
+                    </button>
+
+                </div>
+
+
+                <input
+                    type="text"
+                    id="customNickname"
+                    class="custom-nickname"
+                    placeholder="Then tell me what you like ♡"
+                    style="display: none;"
+                >
+
+            </div>
+
+
+            <p
+                id="visitMessage"
+                class="visit-message">
+            </p>
+
+
+            <button
+                type="submit"
+                class="visit-submit">
+                Send Details ♡
+            </button>
+
+
+        </form>
+
+    </div>
+
+</main>
+
+
+<script src="mine.js"></script>
+</body> </html>
